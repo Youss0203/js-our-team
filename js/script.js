@@ -39,3 +39,5 @@ const membri=[
     ruolo:"Graphic Designer"
 },
 ]
+
+console.log(membri)
