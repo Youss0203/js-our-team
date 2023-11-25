@@ -12,32 +12,46 @@ const membri=[
     nome:"Wayne",
     cognome:"Barnett",
     ruolo:"Founder & CEO",
+    foto:"wayne-barnett-founder-ceo.jpg"
 },
 {
     nome:"Angela",
     cognome:"Caroll",
     ruolo:"Chief Editor",
+    foto:"angela-caroll-chief-editor.jpg"
 },
 {
     nome:"Walter",
     cognome:"Gordon",
     ruolo:"Office Manager",
+    foto:"walter-gordon-office-manager.jpg"
 },
 {
     nome:"Angela",
     cognome:"Lopez",
     ruolo:"Social Media Manager",
+    foto:"angela-lopez-social-media-manager.jpg"
 },
 {
     nome:"Scott",
     cognome:"Estrada",
     ruolo:"Developer",
+    foto:"scott-estrada-developer.jpg"
 },
 {
     nome:"Barbara",
     cognome:"Ramos",
-    ruolo:"Graphic Designer"
+    ruolo:"Graphic Designer",
+    foto:"barbara-ramos-graphic-designer.jpg"
 },
 ]
 
 console.log(membri)
+
+const newEl=document.querySelector("div.container")
+for(let i=0;i<membri.length; i++){
+
+    const newArticle=document.createElement("article");
+    newArticle.innerHTML=("Nome:" +membri[i].nome + "cognome :" +  membri[i].cognome + "ruolo:" + membri[i].ruolo + "foto:" + "<img src= img/" + membri[i].foto + ">")
+    newEl.appendChild(newArticle)
+}
