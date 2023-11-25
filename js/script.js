@@ -48,10 +48,30 @@ const membri=[
 
 console.log(membri)
 
-const newEl=document.querySelector("div.container")
+/*const newEl=document.querySelector("div.container")
 for(let i=0;i<membri.length; i++){
 
     const newArticle=document.createElement("article");
     newArticle.innerHTML=("Nome:" +membri[i].nome + "cognome :" +  membri[i].cognome + "ruolo:" + membri[i].ruolo + "foto:" + "<img src= img/" + membri[i].foto + ">")
     newEl.appendChild(newArticle)
+};*/
+
+
+const containerCardEl=document.getElementById("container-card");
+const cardEl=document.querySelector("members-card")
+
+for(let i=0; i<membri.length; i++){
+     
+    const newCardEl=document.createElement("article");
+
+    newCardEl.innerHTML =
+    `<div class="card mb-5" style="width:20rem">
+             <img src="img/${membri[i].foto}" alt="">
+             <div>
+                 <h3>${membri[i].nome} ${membri[i].cognome}</h3>
+                 <p >${membri[i].ruolo}</p>
+             </div>
+          </div>`
+
+     containerCardEl.appendChild(newCardEl);
 }
